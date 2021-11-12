@@ -1,0 +1,2021 @@
+From 02e60b95c54f8bf53bac1cb2c7119096729a41a8 Mon Sep 17 00:00:00 2001
+From: Diapombeftis <nik.iakovi@gmail.com>
+Date: Fri, 12 Nov 2021 16:01:18 +0100
+Subject: [PATCH] Had I forgotten to save these before?
+
+---
+ README.md                                     |  46 ++---
+ foundations/01-css-methods/README.md          |  42 ++--
+ foundations/01-css-methods/index.html         |  42 ++--
+ .../01-css-methods/solution/solution.css      |  14 +-
+ .../01-css-methods/solution/solution.html     |  44 ++---
+ foundations/01-css-methods/styles.css         |  12 +-
+ foundations/02-class-id-selectors/README.md   |  50 ++---
+ foundations/02-class-id-selectors/index.html  |  34 ++--
+ .../solution/solution.css                     |  36 ++--
+ .../solution/solution.html                    |  32 +--
+ foundations/02-class-id-selectors/style.css   |  36 ++--
+ foundations/03-grouping-selectors/README.md   |  40 ++--
+ foundations/03-grouping-selectors/index.html  |  28 +--
+ .../solution/solution.css                     |  26 +--
+ .../solution/solution.html                    |  26 +--
+ foundations/03-grouping-selectors/style.css   |  24 +--
+ foundations/04-chaining-selectors/README.md   |  40 ++--
+ foundations/04-chaining-selectors/index.html  |  42 ++--
+ .../solution/solution.css                     |  16 +-
+ .../solution/solution.html                    |  38 ++--
+ foundations/04-chaining-selectors/style.css   |  16 +-
+ .../05-descendant-combinator/README.md        |  36 ++--
+ .../05-descendant-combinator/index.html       |  40 ++--
+ .../solution/solution.css                     |  10 +-
+ .../solution/solution.html                    |  40 ++--
+ .../05-descendant-combinator/style.css        |  10 +-
+ foundations/06-cascade-fix/README.md          |  30 +--
+ foundations/06-cascade-fix/index.html         |  42 ++--
+ .../06-cascade-fix/solution/solution.css      | 184 +++++++++---------
+ .../06-cascade-fix/solution/solution.html     |  42 ++--
+ foundations/06-cascade-fix/style.css          |  68 +++----
+ .../margin-and-padding-1/README.md            |  26 +--
+ .../margin-and-padding-1/index.html           |  42 ++--
+ .../solution/solution.css                     |  54 ++---
+ .../solution/solution.html                    |  42 ++--
+ .../margin-and-padding-1/style.css            |  54 ++---
+ .../margin-and-padding-2/README.md            |  34 ++--
+ .../margin-and-padding-2/index.html           |  34 ++--
+ .../solution/solution.css                     | 122 ++++++------
+ .../solution/solution.html                    |  34 ++--
+ .../margin-and-padding-2/style.css            |  78 ++++----
+ 41 files changed, 853 insertions(+), 853 deletions(-)
+
+diff --git a/README.md b/README.md
+index a85211d..0efebae 100644
+--- a/README.md
++++ b/README.md
+@@ -1,23 +1,23 @@
+-# CSS Exercises
+-
+-These exercises are a series of css related tasks intended to complement the HTML and CSS content on The Odin Project.
+-
+-These exercises should be done when instructed during the course of the curriculum.
+-
+-> When doing the following exercises, please use all the documentation and resources you need to accomplish them. You are _not_ intended to have any of this stuff memorized at this point. Check the docs, use google, do what you need to do (besides checking the solutions) to get them done.
+-
+-## How to use these exercises
+-
+-1. Fork and copy this repository. Copies of repositories on your machine are called clones. If you need help cloning to your local environment you can learn how [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
+-2. Go to an exercise directory and open the HTML file in your browser. You can either open the file directly, or use something like VSCode's Live Server.
+-3. For each exercise, view the README, and edit the CSS file to make the output in your browser look like the images provided.
+-4. Each README has a "Self Check" list. Use this to make sure you haven't missed any important details in your implementation.
+-5. Don't check the solutions until you're done!
+-
+-## Some hints
+-- The official solutions put all changes at the _end_ of the CSS file, which may duplicate some selectors (e.g. there might be a `body {}` in the given CSS, and another `body {}` in the solution). When you are working on an exercise, it is best practice to add your CSS to existing selectors instead of duplicating them at the end of the file. We're sacrificing this best practice in our official solutions to make it extra clear to you what things we changed to solve the exercise.
+-- Unless listed in the self-check section, do not worry about getting the exact pixel value for things like margin, padding and font-size. These exercises are intended to test your knowledge of CSS, not your ability to guess that a screenshot is using `font: sans-serif bold 16px`, or that the margin is _exactly_ `42px`.
+-- You may need to add some elements to your HTML to get things into the right spot. (For the first few exercises we make it explicit when this needs to happen.)
+-- You may need to add more selectors to your CSS file. The first few exercises have almost everything already done for you, but as you progress you'll find that you need to add more and more to get the correct result.
+-- In many cases, there will be multiple correct ways to solve these problems. The official solution isn't necessarily the _only right way_, but it is possible to do things in ways that are overall unhelpful. If your solution differs wildly from the official solution (and still passes the self-check criteria), feel free to ask about it in the chatroom.
+-
++# CSS Exercises
++
++These exercises are a series of css related tasks intended to complement the HTML and CSS content on The Odin Project.
++
++These exercises should be done when instructed during the course of the curriculum.
++
++> When doing the following exercises, please use all the documentation and resources you need to accomplish them. You are _not_ intended to have any of this stuff memorized at this point. Check the docs, use google, do what you need to do (besides checking the solutions) to get them done.
++
++## How to use these exercises
++
++1. Fork and copy this repository. Copies of repositories on your machine are called clones. If you need help cloning to your local environment you can learn how [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
++2. Go to an exercise directory and open the HTML file in your browser. You can either open the file directly, or use something like VSCode's Live Server.
++3. For each exercise, view the README, and edit the CSS file to make the output in your browser look like the images provided.
++4. Each README has a "Self Check" list. Use this to make sure you haven't missed any important details in your implementation.
++5. Don't check the solutions until you're done!
++
++## Some hints
++- The official solutions put all changes at the _end_ of the CSS file, which may duplicate some selectors (e.g. there might be a `body {}` in the given CSS, and another `body {}` in the solution). When you are working on an exercise, it is best practice to add your CSS to existing selectors instead of duplicating them at the end of the file. We're sacrificing this best practice in our official solutions to make it extra clear to you what things we changed to solve the exercise.
++- Unless listed in the self-check section, do not worry about getting the exact pixel value for things like margin, padding and font-size. These exercises are intended to test your knowledge of CSS, not your ability to guess that a screenshot is using `font: sans-serif bold 16px`, or that the margin is _exactly_ `42px`.
++- You may need to add some elements to your HTML to get things into the right spot. (For the first few exercises we make it explicit when this needs to happen.)
++- You may need to add more selectors to your CSS file. The first few exercises have almost everything already done for you, but as you progress you'll find that you need to add more and more to get the correct result.
++- In many cases, there will be multiple correct ways to solve these problems. The official solution isn't necessarily the _only right way_, but it is possible to do things in ways that are overall unhelpful. If your solution differs wildly from the official solution (and still passes the self-check criteria), feel free to ask about it in the chatroom.
++
+diff --git a/foundations/01-css-methods/README.md b/foundations/01-css-methods/README.md
+index 9600971..5912b14 100644
+--- a/foundations/01-css-methods/README.md
++++ b/foundations/01-css-methods/README.md
+@@ -1,21 +1,21 @@
+-# Methods for Adding CSS
+-In this exercise, you're going to practice adding CSS to an HTML file using all three methods: external CSS, internal CSS, and inline CSS. You should only be using type selectors for this exercise when adding styles via the external and internal methods. You should also use keywords for colors (e.g. "blue") instead of using RGB or HEX values.
+-
+-There are three elements for you to add styles to, each of which uses a different method of adding CSS to it, as noted in the outcome image below. All other exercises in this section will have a CSS file provided and linked for you, but for this exercise you will have to create the file and link it in the HTML file yourself. This is all about practicing using these different methods and getting the syntax right.
+-
+-The properties you need to add to each element are:
+-
+-* `div`: a red background, white text, a font size of 32px, center aligned, and bold
+-* `p`: a green background, white text, and a font size of 18px
+-* `button`: an orange background and a font size of 18px
+-
+-## Desired Outcome
+-![desired outcome](./desired-outcome.png)
+-
+-
+-### Self Check
+-- Did you use all three methods of adding CSS to an HTML file?
+-- Did you properly link the external CSS file in the HTML file?
+-- Does the `div` element have CSS added via the external method?
+-- Does the `p` element have CSS added via the internal method?
+-- Does the `button` element have CSS added via the inline method?
++# Methods for Adding CSS
++In this exercise, you're going to practice adding CSS to an HTML file using all three methods: external CSS, internal CSS, and inline CSS. You should only be using type selectors for this exercise when adding styles via the external and internal methods. You should also use keywords for colors (e.g. "blue") instead of using RGB or HEX values.
++
++There are three elements for you to add styles to, each of which uses a different method of adding CSS to it, as noted in the outcome image below. All other exercises in this section will have a CSS file provided and linked for you, but for this exercise you will have to create the file and link it in the HTML file yourself. This is all about practicing using these different methods and getting the syntax right.
++
++The properties you need to add to each element are:
++
++* `div`: a red background, white text, a font size of 32px, center aligned, and bold
++* `p`: a green background, white text, and a font size of 18px
++* `button`: an orange background and a font size of 18px
++
++## Desired Outcome
++![desired outcome](./desired-outcome.png)
++
++
++### Self Check
++- Did you use all three methods of adding CSS to an HTML file?
++- Did you properly link the external CSS file in the HTML file?
++- Does the `div` element have CSS added via the external method?
++- Does the `p` element have CSS added via the internal method?
++- Does the `button` element have CSS added via the inline method?
+diff --git a/foundations/01-css-methods/index.html b/foundations/01-css-methods/index.html
+index a9b5d04..aa3f84d 100644
+--- a/foundations/01-css-methods/index.html
++++ b/foundations/01-css-methods/index.html
+@@ -1,22 +1,22 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <link rel="stylesheet" href="styles.css"/>
+-  <style>
+-    p {
+-      color: white;
+-      background-color: green;
+-      font-size: 18px; 
+-    }
+-  </style>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Methods for Adding CSS</title>
+-</head>
+-<body>
+-  <div>Style me via the external method!</div>
+-  <p>I would like to be styled with the internal method, please.</p>
+-  <button style="background-color: orange; font-size: 18px;">Inline Method</button>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <link rel="stylesheet" href="styles.css"/>
++  <style>
++    p {
++      color: white;
++      background-color: green;
++      font-size: 18px; 
++    }
++  </style>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Methods for Adding CSS</title>
++</head>
++<body>
++  <div>Style me via the external method!</div>
++  <p>I would like to be styled with the internal method, please.</p>
++  <button style="background-color: orange; font-size: 18px;">Inline Method</button>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/01-css-methods/solution/solution.css b/foundations/01-css-methods/solution/solution.css
+index 6a4afad..9797104 100644
+--- a/foundations/01-css-methods/solution/solution.css
++++ b/foundations/01-css-methods/solution/solution.css
+@@ -1,7 +1,7 @@
+-div {
+-  background-color: red;
+-  color: white;
+-  font-size: 32px;
+-  text-align: center;
+-  font-weight: bold;
+-}
++div {
++  background-color: red;
++  color: white;
++  font-size: 32px;
++  text-align: center;
++  font-weight: bold;
++}
+diff --git a/foundations/01-css-methods/solution/solution.html b/foundations/01-css-methods/solution/solution.html
+index d9ceb3b..ea2d5ad 100644
+--- a/foundations/01-css-methods/solution/solution.html
++++ b/foundations/01-css-methods/solution/solution.html
+@@ -1,23 +1,23 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Methods for Adding CSS</title>
+-  <link rel="stylesheet" href="solution.css">
+-
+-  <style>
+-    p {
+-      background-color: green;
+-      color: white;
+-      font-size: 18px;
+-    }
+-  </style>
+-</head>
+-<body>
+-  <div>Style me via the external method!</div>
+-  <p>I would like to be styled with the internal method, please.</p>
+-  <button style="background-color: orange; font-size: 18px;">Inline Method</button>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Methods for Adding CSS</title>
++  <link rel="stylesheet" href="solution.css">
++
++  <style>
++    p {
++      background-color: green;
++      color: white;
++      font-size: 18px;
++    }
++  </style>
++</head>
++<body>
++  <div>Style me via the external method!</div>
++  <p>I would like to be styled with the internal method, please.</p>
++  <button style="background-color: orange; font-size: 18px;">Inline Method</button>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/01-css-methods/styles.css b/foundations/01-css-methods/styles.css
+index 16424d5..0d5592a 100644
+--- a/foundations/01-css-methods/styles.css
++++ b/foundations/01-css-methods/styles.css
+@@ -1,7 +1,7 @@
+-div {
+-    color: white;
+-    background-color: red;
+-    font-size: 32px;
+-    text-align: center;
+-    font-weight: bold;
++div {
++    color: white;
++    background-color: red;
++    font-size: 32px;
++    text-align: center;
++    font-weight: bold;
+ }
+\ No newline at end of file
+diff --git a/foundations/02-class-id-selectors/README.md b/foundations/02-class-id-selectors/README.md
+index 148e4fd..8f2246c 100644
+--- a/foundations/02-class-id-selectors/README.md
++++ b/foundations/02-class-id-selectors/README.md
+@@ -1,25 +1,25 @@
+-# Class and ID Selectors
+-Knowing how to add class and ID attributes to HTML elements, as well as use their respective selectors, is invaluable. It's important to practice using them.
+-
+-There are several elements in the HTML file provided, which you will have to add either class or ID attributes to, as noted in the outcome image below. You will then have to add rules in the CSS file provided using the correct selector syntax. Look over the outcome image carefully, and try to keep in mind which elements look similarly styled (classes), which ones may be completely unique from the rest (ID), and which ones have slight variations from others (multiple classes).
+-
+-It isn't entirely important which class or ID values you use, as the focus here is on being able to add the attributes and use the correct selector syntax to style elements. For the colors in this exercise, try using a non-keyword value (RGB, HEX, or HSL). The properties you need to add to each element are:
+-
+-* **All odd numbered elements**: a light red/pink background, and a list of fonts containing `Verdana` as the first option and `sans-serif` as a fallback
+-* **The second element**: blue text and a font size of 36px
+-* **The third element**: in addition to the styles for all odd numbered elements, add a font size of 24px
+-* **The fourth element**: a light green background, a font size of 24px, and bold
+-
+-Quick tip: in VS Code, you can change which format colors are displayed in RGB, HEX, or HSL by hovering over the color value in the CSS and clicking the top of the popup that appears!
+-
+-> ### Note:
+-> Part of your task is to add a font to _some_ of these items. Do not worry about the font of the rest of them. Your browser's default font might be different than the one displayed and that's OK for this exercise.
+-
+-## Desired Outcome
+-![desired outcome](./desired-outcome.png)
+-
+-
+-### Self Check
+-- Do the odd numbered `p` elements share a class?
+-- Do the even numbered `div` elements have unique IDs?
+-- Does the Number 3 element have multiple classes?
++# Class and ID Selectors
++Knowing how to add class and ID attributes to HTML elements, as well as use their respective selectors, is invaluable. It's important to practice using them.
++
++There are several elements in the HTML file provided, which you will have to add either class or ID attributes to, as noted in the outcome image below. You will then have to add rules in the CSS file provided using the correct selector syntax. Look over the outcome image carefully, and try to keep in mind which elements look similarly styled (classes), which ones may be completely unique from the rest (ID), and which ones have slight variations from others (multiple classes).
++
++It isn't entirely important which class or ID values you use, as the focus here is on being able to add the attributes and use the correct selector syntax to style elements. For the colors in this exercise, try using a non-keyword value (RGB, HEX, or HSL). The properties you need to add to each element are:
++
++* **All odd numbered elements**: a light red/pink background, and a list of fonts containing `Verdana` as the first option and `sans-serif` as a fallback
++* **The second element**: blue text and a font size of 36px
++* **The third element**: in addition to the styles for all odd numbered elements, add a font size of 24px
++* **The fourth element**: a light green background, a font size of 24px, and bold
++
++Quick tip: in VS Code, you can change which format colors are displayed in RGB, HEX, or HSL by hovering over the color value in the CSS and clicking the top of the popup that appears!
++
++> ### Note:
++> Part of your task is to add a font to _some_ of these items. Do not worry about the font of the rest of them. Your browser's default font might be different than the one displayed and that's OK for this exercise.
++
++## Desired Outcome
++![desired outcome](./desired-outcome.png)
++
++
++### Self Check
++- Do the odd numbered `p` elements share a class?
++- Do the even numbered `div` elements have unique IDs?
++- Does the Number 3 element have multiple classes?
+diff --git a/foundations/02-class-id-selectors/index.html b/foundations/02-class-id-selectors/index.html
+index 51e90b8..c1dd0a8 100644
+--- a/foundations/02-class-id-selectors/index.html
++++ b/foundations/02-class-id-selectors/index.html
+@@ -1,18 +1,18 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <link rel="stylesheet" href="style.css" />
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Class and ID Selectors</title>
+-  <link rel="stylesheet" href="style.css">
+-</head>
+-<body>
+-  <p class="odd">Number 1 - I'm a class!</p>
+-  <div id="one">Number 2 - I'm one ID.</div>
+-  <p class="odd cooler">Number 3 - I'm a class, but cooler!</p>
+-  <div id="another">Number 4 - I'm another ID.</div>
+-  <p class="odd">Number 5 - I'm a class!</p>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <link rel="stylesheet" href="style.css" />
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Class and ID Selectors</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <p class="odd">Number 1 - I'm a class!</p>
++  <div id="one">Number 2 - I'm one ID.</div>
++  <p class="odd cooler">Number 3 - I'm a class, but cooler!</p>
++  <div id="another">Number 4 - I'm another ID.</div>
++  <p class="odd">Number 5 - I'm a class!</p>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/02-class-id-selectors/solution/solution.css b/foundations/02-class-id-selectors/solution/solution.css
+index 3cd7120..b78c148 100644
+--- a/foundations/02-class-id-selectors/solution/solution.css
++++ b/foundations/02-class-id-selectors/solution/solution.css
+@@ -1,19 +1,19 @@
+-.odd {
+-  background-color: rgb(255, 167, 167);
+-  font-family: Verdana, sans-serif;
+-}
+-
+-.oddly-cool {
+-  font-size: 24px;
+-}
+-
+-#two {
+-  color: #0000ff;
+-  font-size: 36px;
+-}
+-
+-#four {
+-  background-color: hsl(120, 100%, 75%);
+-  font-size: 24px;
+-  font-weight: bold;
++.odd {
++  background-color: rgb(255, 167, 167);
++  font-family: Verdana, sans-serif;
++}
++
++.oddly-cool {
++  font-size: 24px;
++}
++
++#two {
++  color: #0000ff;
++  font-size: 36px;
++}
++
++#four {
++  background-color: hsl(120, 100%, 75%);
++  font-size: 24px;
++  font-weight: bold;
+ }
+\ No newline at end of file
+diff --git a/foundations/02-class-id-selectors/solution/solution.html b/foundations/02-class-id-selectors/solution/solution.html
+index d7c955e..02207b7 100644
+--- a/foundations/02-class-id-selectors/solution/solution.html
++++ b/foundations/02-class-id-selectors/solution/solution.html
+@@ -1,17 +1,17 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Class and ID Selectors</title>
+-  <link rel="stylesheet" href="solution.css">
+-</head>
+-<body>
+-  <p class="odd">Number 1 - I'm a class!</p>
+-  <div id="two">Number 2 - I'm one ID.</div>
+-  <p class="odd oddly-cool">Number 3 - I'm a class, but cooler!</p>
+-  <div id="four">Number 4 - I'm another ID.</div>
+-  <p class="odd">Number 5 - I'm a class!</p>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Class and ID Selectors</title>
++  <link rel="stylesheet" href="solution.css">
++</head>
++<body>
++  <p class="odd">Number 1 - I'm a class!</p>
++  <div id="two">Number 2 - I'm one ID.</div>
++  <p class="odd oddly-cool">Number 3 - I'm a class, but cooler!</p>
++  <div id="four">Number 4 - I'm another ID.</div>
++  <p class="odd">Number 5 - I'm a class!</p>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/02-class-id-selectors/style.css b/foundations/02-class-id-selectors/style.css
+index 34f1f46..caaa8d0 100644
+--- a/foundations/02-class-id-selectors/style.css
++++ b/foundations/02-class-id-selectors/style.css
+@@ -1,19 +1,19 @@
+-.odd {
+-    background-color : rgb(255, 185, 220) ;
+-    font-family: Verdana, sans-serif;
+-}
+-
+-#one{
+-    color: rgb(38, 18, 221);
+-    font-size: 36px;
+-}
+-
+-.odd.cooler {
+-    font-size: 24px;
+-}
+-
+-#another {
+-    background-color: rgb(118, 226, 124);
+-    font-size: 24px;
+-    font-weight: bold;
++.odd {
++    background-color : rgb(255, 185, 220) ;
++    font-family: Verdana, sans-serif;
++}
++
++#one{
++    color: rgb(38, 18, 221);
++    font-size: 36px;
++}
++
++.odd.cooler {
++    font-size: 24px;
++}
++
++#another {
++    background-color: rgb(118, 226, 124);
++    font-size: 24px;
++    font-weight: bold;
+ }
+\ No newline at end of file
+diff --git a/foundations/03-grouping-selectors/README.md b/foundations/03-grouping-selectors/README.md
+index 8b5d206..3d7dda5 100644
+--- a/foundations/03-grouping-selectors/README.md
++++ b/foundations/03-grouping-selectors/README.md
+@@ -1,20 +1,20 @@
+-# Grouping Selectors
+-
+-Let's build a little off the previous exercise, in which you (hopefully) added multiple classes to a single element in order to apply two different rules to it.
+-
+-Instead of having a single element with two different rules applied, though, you're instead going to give two elements each a unique class name, then add rules for styles that both elements share as well as their own unique styles. Make sure you take a good look at the outcome image below to see exactly what is unique about each element, and what both elements have in common.
+-
+-This will help you further practice adding classes and using class selectors, so be sure you add the class attribute in the HTML file. For the remainder of these exercises, the format of any colors is entirely up to you; we trust you'll practice using the different values! The properties you need to add to each element are:
+-
+-* **The first element**: a black background and white text
+-* **The second element**: a yellow background
+-* **Both elements**: a font size of 28px and a list of fonts containing `Helvetica` and `Times New Roman`, with `sans-serif` as a fallback 
+-
+-## Desired Outcome
+-![desired outcome](./desired-outcome.png)
+-
+-
+-### Self Check
+-- Does each element have a unique class name?
+-- Did you use the grouping selector for styles that both elements share?
+-- Did you make separate rules for the styles unique to each element?
++# Grouping Selectors
++
++Let's build a little off the previous exercise, in which you (hopefully) added multiple classes to a single element in order to apply two different rules to it.
++
++Instead of having a single element with two different rules applied, though, you're instead going to give two elements each a unique class name, then add rules for styles that both elements share as well as their own unique styles. Make sure you take a good look at the outcome image below to see exactly what is unique about each element, and what both elements have in common.
++
++This will help you further practice adding classes and using class selectors, so be sure you add the class attribute in the HTML file. For the remainder of these exercises, the format of any colors is entirely up to you; we trust you'll practice using the different values! The properties you need to add to each element are:
++
++* **The first element**: a black background and white text
++* **The second element**: a yellow background
++* **Both elements**: a font size of 28px and a list of fonts containing `Helvetica` and `Times New Roman`, with `sans-serif` as a fallback 
++
++## Desired Outcome
++![desired outcome](./desired-outcome.png)
++
++
++### Self Check
++- Does each element have a unique class name?
++- Did you use the grouping selector for styles that both elements share?
++- Did you make separate rules for the styles unique to each element?
+diff --git a/foundations/03-grouping-selectors/index.html b/foundations/03-grouping-selectors/index.html
+index cc15786..ca22007 100644
+--- a/foundations/03-grouping-selectors/index.html
++++ b/foundations/03-grouping-selectors/index.html
+@@ -1,15 +1,15 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <link rel="stylesheet" href="style.css"/>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Grouping Selectors</title>
+-  <link rel="stylesheet" href="style.css">
+-</head>
+-<body>
+-  <button class="button1">Click Me!</button>
+-  <button class="button2">No, Click Me!</button>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <link rel="stylesheet" href="style.css"/>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Grouping Selectors</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <button class="button1">Click Me!</button>
++  <button class="button2">No, Click Me!</button>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/03-grouping-selectors/solution/solution.css b/foundations/03-grouping-selectors/solution/solution.css
+index 16e6760..7704015 100644
+--- a/foundations/03-grouping-selectors/solution/solution.css
++++ b/foundations/03-grouping-selectors/solution/solution.css
+@@ -1,14 +1,14 @@
+-.inverted,
+-.fancy {
+-  font-family: Helvetica, "Times New Roman", sans-serif;
+-  font-size: 28px;
+-}
+-
+-.inverted {
+-  background-color: black;
+-  color: white;
+-}
+-
+-.fancy {
+-  background-color: yellow;
++.inverted,
++.fancy {
++  font-family: Helvetica, "Times New Roman", sans-serif;
++  font-size: 28px;
++}
++
++.inverted {
++  background-color: black;
++  color: white;
++}
++
++.fancy {
++  background-color: yellow;
+ }
+\ No newline at end of file
+diff --git a/foundations/03-grouping-selectors/solution/solution.html b/foundations/03-grouping-selectors/solution/solution.html
+index ec07ad0..3875f96 100644
+--- a/foundations/03-grouping-selectors/solution/solution.html
++++ b/foundations/03-grouping-selectors/solution/solution.html
+@@ -1,14 +1,14 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Grouping Selectors</title>
+-  <link rel="stylesheet" href="solution.css">
+-</head>
+-<body>
+-  <button class="inverted">Click Me!</button>
+-  <button class="fancy">No, Click Me!</button>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Grouping Selectors</title>
++  <link rel="stylesheet" href="solution.css">
++</head>
++<body>
++  <button class="inverted">Click Me!</button>
++  <button class="fancy">No, Click Me!</button>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/03-grouping-selectors/style.css b/foundations/03-grouping-selectors/style.css
+index 4dbe9fa..f89a021 100644
+--- a/foundations/03-grouping-selectors/style.css
++++ b/foundations/03-grouping-selectors/style.css
+@@ -1,13 +1,13 @@
+-.button1{
+-    background-color: black;
+-    color: white
+-}
+-
+-.button2{
+-    background-color: yellow;
+-}
+-
+-.button1, .button2 {
+-    font-size : 28px;
+-    font-family: helvetica, 'Times New Roman', sans-serif;
++.button1{
++    background-color: black;
++    color: white
++}
++
++.button2{
++    background-color: yellow;
++}
++
++.button1, .button2 {
++    font-size : 28px;
++    font-family: helvetica, 'Times New Roman', sans-serif;
+ }
+\ No newline at end of file
+diff --git a/foundations/04-chaining-selectors/README.md b/foundations/04-chaining-selectors/README.md
+index 47a8619..bb45ec9 100644
+--- a/foundations/04-chaining-selectors/README.md
++++ b/foundations/04-chaining-selectors/README.md
+@@ -1,20 +1,20 @@
+-# Chaining Selectors
+-
+-Credits for the images in this exercise go to [Katho Mutodo](https://www.pexels.com/@photobykatho?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) and [Andrea Piacquadio](https://www.pexels.com/@olly?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels).
+-
+-With this exercise, we've provided you a completed HTML file, so you will only have to edit the CSS file. For this exercise, it's more important to understand how chaining different selectors works than how to actually add the attributes.
+-
+-We have two images for you to style, each with two class names, where one of the class names is shared. The goal here is to chain the selectors for both elements, so that each have a unique style applied, despite using a shared class selector. For example, you want an element that has both X and Y to have one set of styles, while an element with X and Z has a completely different set of styles. We included the original images as well, so that you can see how the styles you will be adding look in comparison, so do not add any styles to them.
+-
+-The properties you need to add to each element are:
+-
+-* Make the element with both the `avatar` and `proportioned` classes 300 pixels wide, then give it a height so that it retains its original square proportions (don't hardcode in a pixel value for the height!).
+-* Make the element with both the `avatar` and `distorted` classes 200 pixels wide, then make its height twice as big as its width (here you should hardcode in a pixel value).
+-
+-## Desired Outcome
+-![desired outcome](./desired-outcome.png)
+-
+-### Self Check
+-- Did you properly chain class selectors for each rule?
+-- Does the `proportioned` image retain its original square proportions?
+-- Does the `distorted` image end up looking squished and, well, distorted?
++# Chaining Selectors
++
++Credits for the images in this exercise go to [Katho Mutodo](https://www.pexels.com/@photobykatho?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) and [Andrea Piacquadio](https://www.pexels.com/@olly?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels).
++
++With this exercise, we've provided you a completed HTML file, so you will only have to edit the CSS file. For this exercise, it's more important to understand how chaining different selectors works than how to actually add the attributes.
++
++We have two images for you to style, each with two class names, where one of the class names is shared. The goal here is to chain the selectors for both elements, so that each have a unique style applied, despite using a shared class selector. For example, you want an element that has both X and Y to have one set of styles, while an element with X and Z has a completely different set of styles. We included the original images as well, so that you can see how the styles you will be adding look in comparison, so do not add any styles to them.
++
++The properties you need to add to each element are:
++
++* Make the element with both the `avatar` and `proportioned` classes 300 pixels wide, then give it a height so that it retains its original square proportions (don't hardcode in a pixel value for the height!).
++* Make the element with both the `avatar` and `distorted` classes 200 pixels wide, then make its height twice as big as its width (here you should hardcode in a pixel value).
++
++## Desired Outcome
++![desired outcome](./desired-outcome.png)
++
++### Self Check
++- Did you properly chain class selectors for each rule?
++- Does the `proportioned` image retain its original square proportions?
++- Does the `distorted` image end up looking squished and, well, distorted?
+diff --git a/foundations/04-chaining-selectors/index.html b/foundations/04-chaining-selectors/index.html
+index 2877008..36e6b4e 100644
+--- a/foundations/04-chaining-selectors/index.html
++++ b/foundations/04-chaining-selectors/index.html
+@@ -1,22 +1,22 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Chaining Selectors</title>
+-  <link rel="stylesheet" href="style.css">
+-</head>
+-<body>
+-  <!-- Use the classes BELOW this line -->
+-  <div>
+-    <img class="avatar proportioned" src="./pexels-katho-mutodo-8434791.jpg" alt="">
+-    <img class="avatar distorted" src="./pexels-andrea-piacquadio-3777931.jpg" alt="">
+-  </div>
+-  <!-- Use the classes ABOVE this line -->
+-  <div>
+-    <img class="original-proportioned" src="./pexels-katho-mutodo-8434791.jpg" alt="">
+-    <img class="original-distorted" src="./pexels-andrea-piacquadio-3777931.jpg" alt="">
+-  </div>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Chaining Selectors</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <!-- Use the classes BELOW this line -->
++  <div>
++    <img class="avatar proportioned" src="./pexels-katho-mutodo-8434791.jpg" alt="">
++    <img class="avatar distorted" src="./pexels-andrea-piacquadio-3777931.jpg" alt="">
++  </div>
++  <!-- Use the classes ABOVE this line -->
++  <div>
++    <img class="original-proportioned" src="./pexels-katho-mutodo-8434791.jpg" alt="">
++    <img class="original-distorted" src="./pexels-andrea-piacquadio-3777931.jpg" alt="">
++  </div>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/04-chaining-selectors/solution/solution.css b/foundations/04-chaining-selectors/solution/solution.css
+index 32c0a64..83af212 100644
+--- a/foundations/04-chaining-selectors/solution/solution.css
++++ b/foundations/04-chaining-selectors/solution/solution.css
+@@ -1,9 +1,9 @@
+-.avatar.proportioned {
+-  height: auto;
+-  width: 300px;
+-}
+-
+-.avatar.distorted {
+-  height: 400px;
+-  width: 200px;
++.avatar.proportioned {
++  height: auto;
++  width: 300px;
++}
++
++.avatar.distorted {
++  height: 400px;
++  width: 200px;
+ }
+\ No newline at end of file
+diff --git a/foundations/04-chaining-selectors/solution/solution.html b/foundations/04-chaining-selectors/solution/solution.html
+index db16f8d..efac3a1 100644
+--- a/foundations/04-chaining-selectors/solution/solution.html
++++ b/foundations/04-chaining-selectors/solution/solution.html
+@@ -1,20 +1,20 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Chaining Selectors</title>
+-  <link rel="stylesheet" href="solution.css">
+-</head>
+-<body>
+-  <div>
+-    <img class="avatar proportioned" src="../pexels-katho-mutodo-8434791.jpg" alt="">
+-    <img class="avatar distorted" src="../pexels-andrea-piacquadio-3777931.jpg" alt="">
+-  </div>
+-  <div>
+-    <img class="original-proportioned" src="../pexels-katho-mutodo-8434791.jpg" alt="">
+-    <img class="original-distorted" src="../pexels-andrea-piacquadio-3777931.jpg" alt="">
+-  </div>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Chaining Selectors</title>
++  <link rel="stylesheet" href="solution.css">
++</head>
++<body>
++  <div>
++    <img class="avatar proportioned" src="../pexels-katho-mutodo-8434791.jpg" alt="">
++    <img class="avatar distorted" src="../pexels-andrea-piacquadio-3777931.jpg" alt="">
++  </div>
++  <div>
++    <img class="original-proportioned" src="../pexels-katho-mutodo-8434791.jpg" alt="">
++    <img class="original-distorted" src="../pexels-andrea-piacquadio-3777931.jpg" alt="">
++  </div>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/04-chaining-selectors/style.css b/foundations/04-chaining-selectors/style.css
+index 36a16f8..4be1a27 100644
+--- a/foundations/04-chaining-selectors/style.css
++++ b/foundations/04-chaining-selectors/style.css
+@@ -1,9 +1,9 @@
+-.avatar.proportioned {
+-    width: 300px;
+-    height: auto;
+-}
+-
+-.avatar.distorted {
+-    width: 200px;
+-    height: 400px;
++.avatar.proportioned {
++    width: 300px;
++    height: auto;
++}
++
++.avatar.distorted {
++    width: 200px;
++    height: 400px;
+ }
+\ No newline at end of file
+diff --git a/foundations/05-descendant-combinator/README.md b/foundations/05-descendant-combinator/README.md
+index 7577c4e..3d62731 100644
+--- a/foundations/05-descendant-combinator/README.md
++++ b/foundations/05-descendant-combinator/README.md
+@@ -1,18 +1,18 @@
+-# Descendant Combinator
+-Understanding how combinators work can become a lot easier when you start playing around with them and see what exactly is affected by them versus what isn't.
+-
+-The goal of this exercise is to apply styles to elements that are descendants of another element, while leaving elements that *aren't* descendants of that element unstyled.
+-
+-You can use either type or class selectors for this exercise; use whichever you may feel you want to practice with more. The HTML file is set up (so no need to edit anything in it) such that any combination of selectors will work, so if you're feeling adventurous you can even try combining a type *and* class selector for the descendant combinator.
+-
+-The properties you need to add are:
+-
+-* Only the `p` elements that are descendants of the `div` element should have a yellow background, red text, a font size of 20px, and center aligned.
+-
+-## Desired Outcome
+-![desired outcome](./desired-outcome.png)
+-
+-
+-### Self Check
+-- Do the elements that contain the text "This should be styled" have the correct styles applied?
+-- Do the elements that contain the text "This should be unstyled" have no styles applied?
++# Descendant Combinator
++Understanding how combinators work can become a lot easier when you start playing around with them and see what exactly is affected by them versus what isn't.
++
++The goal of this exercise is to apply styles to elements that are descendants of another element, while leaving elements that *aren't* descendants of that element unstyled.
++
++You can use either type or class selectors for this exercise; use whichever you may feel you want to practice with more. The HTML file is set up (so no need to edit anything in it) such that any combination of selectors will work, so if you're feeling adventurous you can even try combining a type *and* class selector for the descendant combinator.
++
++The properties you need to add are:
++
++* Only the `p` elements that are descendants of the `div` element should have a yellow background, red text, a font size of 20px, and center aligned.
++
++## Desired Outcome
++![desired outcome](./desired-outcome.png)
++
++
++### Self Check
++- Do the elements that contain the text "This should be styled" have the correct styles applied?
++- Do the elements that contain the text "This should be unstyled" have no styles applied?
+diff --git a/foundations/05-descendant-combinator/index.html b/foundations/05-descendant-combinator/index.html
+index 9771a2a..74496d3 100644
+--- a/foundations/05-descendant-combinator/index.html
++++ b/foundations/05-descendant-combinator/index.html
+@@ -1,21 +1,21 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Descendant Combinator</title>
+-  <link rel="stylesheet" href="style.css">
+-</head>
+-<body>
+-  <div class="container">
+-    <p class="text">This should be styled.</p>
+-  </div>
+-  <p class="text">This should be unstyled.</p>
+-  <p class="text">This should be unstyled.</p>
+-  <div class="container">
+-    <p class="text">This should be styled.</p>
+-    <p class="text">This should be styled.</p>
+-  </div>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Descendant Combinator</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <div class="container">
++    <p class="text">This should be styled.</p>
++  </div>
++  <p class="text">This should be unstyled.</p>
++  <p class="text">This should be unstyled.</p>
++  <div class="container">
++    <p class="text">This should be styled.</p>
++    <p class="text">This should be styled.</p>
++  </div>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/05-descendant-combinator/solution/solution.css b/foundations/05-descendant-combinator/solution/solution.css
+index a4cd654..ac97acf 100644
+--- a/foundations/05-descendant-combinator/solution/solution.css
++++ b/foundations/05-descendant-combinator/solution/solution.css
+@@ -1,6 +1,6 @@
+-.container .text {
+-  background-color: yellow;
+-  color: red;
+-  font-size: 20px;
+-  text-align: center;
++.container .text {
++  background-color: yellow;
++  color: red;
++  font-size: 20px;
++  text-align: center;
+ }
+\ No newline at end of file
+diff --git a/foundations/05-descendant-combinator/solution/solution.html b/foundations/05-descendant-combinator/solution/solution.html
+index efcb155..f7c5fba 100644
+--- a/foundations/05-descendant-combinator/solution/solution.html
++++ b/foundations/05-descendant-combinator/solution/solution.html
+@@ -1,21 +1,21 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Descendant Combinator</title>
+-  <link rel="stylesheet" href="solution.css">
+-</head>
+-<body>
+-  <div class="container">
+-    <p class="text">This should be styled.</p>
+-  </div>
+-  <p class="text">This should be unstyled.</p>
+-  <p class="text">This should be unstyled.</p>
+-  <div class="container">
+-    <p class="text">This should be styled.</p>
+-    <p class="text">This should be styled.</p>
+-  </div>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Descendant Combinator</title>
++  <link rel="stylesheet" href="solution.css">
++</head>
++<body>
++  <div class="container">
++    <p class="text">This should be styled.</p>
++  </div>
++  <p class="text">This should be unstyled.</p>
++  <p class="text">This should be unstyled.</p>
++  <div class="container">
++    <p class="text">This should be styled.</p>
++    <p class="text">This should be styled.</p>
++  </div>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/05-descendant-combinator/style.css b/foundations/05-descendant-combinator/style.css
+index 19693d9..be96f5f 100644
+--- a/foundations/05-descendant-combinator/style.css
++++ b/foundations/05-descendant-combinator/style.css
+@@ -1,6 +1,6 @@
+-.container .text{
+-    background-color: yellow;
+-    color: red;
+-    text-align: center;
+-    font-size: 20px;
++.container .text{
++    background-color: yellow;
++    color: red;
++    text-align: center;
++    font-size: 20px;
+ }
+\ No newline at end of file
+diff --git a/foundations/06-cascade-fix/README.md b/foundations/06-cascade-fix/README.md
+index ddd73c9..0531821 100644
+--- a/foundations/06-cascade-fix/README.md
++++ b/foundations/06-cascade-fix/README.md
+@@ -1,15 +1,15 @@
+-# CSS Methods
+-This final exercise for CSS Foundations is going to give you a closer look at the cascade, in particular specificity and rule order. Both the HTML and CSS files are filled out for you, so instead of adding rules yourself, you will simply be editing what is provided.
+-
+-There are a few elements that have some sort of specificity or rule order issue in the provided CSS file. It's up to you to figure out what issue is affecting an element, and how to fix it. You can edit the CSS file by adding or removing selectors or moving stuff around, but you should not edit the HTML file or any of the actual style declarations in the CSS.
+-
+-There are multiple ways to solve this exercise, and we did our best to include all of the possible solutions for each element.
+-
+-Issues with the cascade can be the bane of their existence for many when it comes to CSS. While you won't become a cascade expert from this exercise alone, and there are other ways to deal with these issues, it is still super helpful to see how these issues affect our final styles and why it's important to order rules carefully.
+-
+-## Desired Outcome
+-![desired outcome](./desired-outcome.png)
+-
+-### Self Check
+-- Did you make sure to not edit the HTML file?
+-- If you added selectors to the CSS, do they target a valid HTML element?
++# CSS Methods
++This final exercise for CSS Foundations is going to give you a closer look at the cascade, in particular specificity and rule order. Both the HTML and CSS files are filled out for you, so instead of adding rules yourself, you will simply be editing what is provided.
++
++There are a few elements that have some sort of specificity or rule order issue in the provided CSS file. It's up to you to figure out what issue is affecting an element, and how to fix it. You can edit the CSS file by adding or removing selectors or moving stuff around, but you should not edit the HTML file or any of the actual style declarations in the CSS.
++
++There are multiple ways to solve this exercise, and we did our best to include all of the possible solutions for each element.
++
++Issues with the cascade can be the bane of their existence for many when it comes to CSS. While you won't become a cascade expert from this exercise alone, and there are other ways to deal with these issues, it is still super helpful to see how these issues affect our final styles and why it's important to order rules carefully.
++
++## Desired Outcome
++![desired outcome](./desired-outcome.png)
++
++### Self Check
++- Did you make sure to not edit the HTML file?
++- If you added selectors to the CSS, do they target a valid HTML element?
+diff --git a/foundations/06-cascade-fix/index.html b/foundations/06-cascade-fix/index.html
+index ca6aa5b..6a5098c 100644
+--- a/foundations/06-cascade-fix/index.html
++++ b/foundations/06-cascade-fix/index.html
+@@ -1,22 +1,22 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Fix the Cascade</title>
+-  <link rel="stylesheet" href="style.css">
+-</head>
+-<body>
+-  <p class="para">I'm just a simple paragraph!</p>
+-  <p class="para small-para">I'm a smaller paragraph!</p>
+-
+-  <button id="confirm-button" class="button confirm">Confirm</button>
+-  <button id="cancel-button" class="button cancel">Cancel</button>
+-
+-  <div class="text">I'm not related to those divs down there.</div>
+-  <div class="text">I have a child!
+-    <div class="text child">My ancestor is so embarrassing.</div>
+-  </div>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Fix the Cascade</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <p class="para">I'm just a simple paragraph!</p>
++  <p class="para small-para">I'm a smaller paragraph!</p>
++
++  <button id="confirm-button" class="button confirm">Confirm</button>
++  <button id="cancel-button" class="button cancel">Cancel</button>
++
++  <div class="text">I'm not related to those divs down there.</div>
++  <div class="text">I have a child!
++    <div class="text child">My ancestor is so embarrassing.</div>
++  </div>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/06-cascade-fix/solution/solution.css b/foundations/06-cascade-fix/solution/solution.css
+index 44bee02..d0314ba 100644
+--- a/foundations/06-cascade-fix/solution/solution.css
++++ b/foundations/06-cascade-fix/solution/solution.css
+@@ -1,93 +1,93 @@
+-.para,
+-.small-para {
+-  color: hsl(0, 100%, 50%);
+-}
+-
+-.para {
+-  font-size: 22px;
+-}
+-
+-.button {
+-  background-color: #ffc0cb;
+-  color: black;
+-  font-size: 20px;
+-}
+-
+-div.text {
+-  color: green;
+-  font-size: 28px;
+-}
+-
+-/* SOLUTION */
+-
+-/* 
+-  For the following rule, we removed it from its original position in the file:
+-
+-  .small-para {
+-    font-size: 12px;
+-  } 
+-
+-  Then we placed it after the .para selector, taking advantage of the rule order since both selectors have the same specificity. 
+-  
+-  Another solution would be keeping it in its original place and just chaining selectors, giving this rule a higher specificity:
+-
+-  p.small-para {
+-    font-size: 12px;
+-  }
+-*/
+-
+-.small-para {
+-  font-size: 12px;
+-}
+-
+-/* 
+-  For the following rule we removed the original .confirm selector:
+-
+-  .confirm {
+-    background: green;
+-    color: white;
+-    font-size: 20px;
+-    font-weight: bold;
+-  } 
+-
+-  Then we used an ID selector instead, since it has a higher specificity than the .button selector.
+-
+-  Other solutions would be to simply move the .confirm rule below the .button rule, or to use the .button.confirm selector without moving it:
+-
+-  .button.confirm {
+-    background: green;
+-    color: white;
+-    font-size: 20px;
+-    font-weight: bold;
+-  }
+-*/
+-
+-#confirm-button {
+-  background: green;
+-  color: white;
+-  font-size: 20px;
+-  font-weight: bold;
+-}
+-
+-/*
+-  For the following rule we first removed it from its original position in the file: 
+-
+-  .child {
+-    color: red;
+-    font-size: 14px;
+-  }
+-
+-  Then we added another selector to create a descendant combinator. If we only created a descendant combinator, the specificity would be tied with the div.text selector and it would come down to rule order, and if we only moved it the div.text selector would still have a higher specificity.
+-  
+-  Another solution would be to keep the rule where it was and just replace the div selector with the .text selector:
+-
+-  .text .child {
+-    color: red;
+-    font-size: 14px;
+-  }
+-*/
+-
+-div .child {
+-  color: red;
+-  font-size: 14px;
++.para,
++.small-para {
++  color: hsl(0, 100%, 50%);
++}
++
++.para {
++  font-size: 22px;
++}
++
++.button {
++  background-color: #ffc0cb;
++  color: black;
++  font-size: 20px;
++}
++
++div.text {
++  color: green;
++  font-size: 28px;
++}
++
++/* SOLUTION */
++
++/* 
++  For the following rule, we removed it from its original position in the file:
++
++  .small-para {
++    font-size: 12px;
++  } 
++
++  Then we placed it after the .para selector, taking advantage of the rule order since both selectors have the same specificity. 
++  
++  Another solution would be keeping it in its original place and just chaining selectors, giving this rule a higher specificity:
++
++  p.small-para {
++    font-size: 12px;
++  }
++*/
++
++.small-para {
++  font-size: 12px;
++}
++
++/* 
++  For the following rule we removed the original .confirm selector:
++
++  .confirm {
++    background: green;
++    color: white;
++    font-size: 20px;
++    font-weight: bold;
++  } 
++
++  Then we used an ID selector instead, since it has a higher specificity than the .button selector.
++
++  Other solutions would be to simply move the .confirm rule below the .button rule, or to use the .button.confirm selector without moving it:
++
++  .button.confirm {
++    background: green;
++    color: white;
++    font-size: 20px;
++    font-weight: bold;
++  }
++*/
++
++#confirm-button {
++  background: green;
++  color: white;
++  font-size: 20px;
++  font-weight: bold;
++}
++
++/*
++  For the following rule we first removed it from its original position in the file: 
++
++  .child {
++    color: red;
++    font-size: 14px;
++  }
++
++  Then we added another selector to create a descendant combinator. If we only created a descendant combinator, the specificity would be tied with the div.text selector and it would come down to rule order, and if we only moved it the div.text selector would still have a higher specificity.
++  
++  Another solution would be to keep the rule where it was and just replace the div selector with the .text selector:
++
++  .text .child {
++    color: red;
++    font-size: 14px;
++  }
++*/
++
++div .child {
++  color: red;
++  font-size: 14px;
+ }
+\ No newline at end of file
+diff --git a/foundations/06-cascade-fix/solution/solution.html b/foundations/06-cascade-fix/solution/solution.html
+index 27ac65a..4b22ae0 100644
+--- a/foundations/06-cascade-fix/solution/solution.html
++++ b/foundations/06-cascade-fix/solution/solution.html
+@@ -1,22 +1,22 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Fix the Cascade</title>
+-  <link rel="stylesheet" href="solution.css">
+-</head>
+-<body>
+-  <p class="para">I'm just a simple paragraph!</p>
+-  <p class="para small-para">I'm a smaller paragraph!</p>
+-
+-  <button id="confirm-button" class="button confirm">Confirm</button>
+-  <button id="cancel-button" class="button cancel">Cancel</button>
+-
+-  <div class="text">I'm not related to those divs down there.</div>
+-  <div class="text">I have a child!
+-    <div class="text child">My ancestor is so embarrassing.</div>
+-  </div>
+-</body>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Fix the Cascade</title>
++  <link rel="stylesheet" href="solution.css">
++</head>
++<body>
++  <p class="para">I'm just a simple paragraph!</p>
++  <p class="para small-para">I'm a smaller paragraph!</p>
++
++  <button id="confirm-button" class="button confirm">Confirm</button>
++  <button id="cancel-button" class="button cancel">Cancel</button>
++
++  <div class="text">I'm not related to those divs down there.</div>
++  <div class="text">I have a child!
++    <div class="text child">My ancestor is so embarrassing.</div>
++  </div>
++</body>
+ </html>
+\ No newline at end of file
+diff --git a/foundations/06-cascade-fix/style.css b/foundations/06-cascade-fix/style.css
+index 0edacb0..38d5afa 100644
+--- a/foundations/06-cascade-fix/style.css
++++ b/foundations/06-cascade-fix/style.css
+@@ -1,35 +1,35 @@
+-.para,
+-.small-para {
+-  color: hsl(0, 100%, 50%);
+-}
+-
+-.small-para.para {
+-  font-size: 12px;
+-}
+-
+-.para {
+-  font-size: 22px;
+-}
+-
+-.confirm.button {
+-  background: green;
+-  color: white;
+-  font-size: 20px;
+-  font-weight: bold;
+-} 
+-
+-.button {
+-  background-color: #ffc0cb;
+-  color: black;
+-  font-size: 20px;
+-}
+-
+-div.text.child {
+-  color: red;
+-  font-size: 14px;
+-}
+-
+-div.text {
+-  color: green;
+-  font-size: 28px;
++.para,
++.small-para {
++  color: hsl(0, 100%, 50%);
++}
++
++.small-para.para {
++  font-size: 12px;
++}
++
++.para {
++  font-size: 22px;
++}
++
++.confirm.button {
++  background: green;
++  color: white;
++  font-size: 20px;
++  font-weight: bold;
++} 
++
++.button {
++  background-color: #ffc0cb;
++  color: black;
++  font-size: 20px;
++}
++
++div.text.child {
++  color: red;
++  font-size: 14px;
++}
++
++div.text {
++  color: green;
++  font-size: 28px;
+ }
+\ No newline at end of file
+diff --git a/margin-and-padding/margin-and-padding-1/README.md b/margin-and-padding/margin-and-padding-1/README.md
+index c09aecb..8542b98 100644
+--- a/margin-and-padding/margin-and-padding-1/README.md
++++ b/margin-and-padding/margin-and-padding-1/README.md
+@@ -1,14 +1,14 @@
+-# Margin and Padding practice
+-
+-For this first exercise, simply edit the `style.css` file so that the divs look like the image below. Only edit the CSS where instructed in the file.  You should only have to change the values of the margin and padding for this exercise. You should not have to add or remove properties in the CSS, or touch the HTML.
+-
+-![outcome](./desired-outcome.png)
+-
+-### Self-check 
+-Use this section to check your work. On _these_ projects, your goal isn't to attain 100% pixel perfection, but to use the tools you've learned to get relatively close to the desired output.
+-
+-- Div One and Div Three have 32px between their text and border.
+-- Div One has 12px between it and any other element on the page.
+-- There is a 48px gap between Div Two and Div Three.
+-- Div Three is aligned to the right.
++# Margin and Padding practice
++
++For this first exercise, simply edit the `style.css` file so that the divs look like the image below. Only edit the CSS where instructed in the file.  You should only have to change the values of the margin and padding for this exercise. You should not have to add or remove properties in the CSS, or touch the HTML.
++
++![outcome](./desired-outcome.png)
++
++### Self-check 
++Use this section to check your work. On _these_ projects, your goal isn't to attain 100% pixel perfection, but to use the tools you've learned to get relatively close to the desired output.
++
++- Div One and Div Three have 32px between their text and border.
++- Div One has 12px between it and any other element on the page.
++- There is a 48px gap between Div Two and Div Three.
++- Div Three is aligned to the right.
+ - Div Three's alignment is achieved using `margin` (and not float, flexbox, etc.).
+\ No newline at end of file
+diff --git a/margin-and-padding/margin-and-padding-1/index.html b/margin-and-padding/margin-and-padding-1/index.html
+index 99116e8..7464d8f 100644
+--- a/margin-and-padding/margin-and-padding-1/index.html
++++ b/margin-and-padding/margin-and-padding-1/index.html
+@@ -1,21 +1,21 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Margin and Padding exercise</title>
+-  <link rel="stylesheet" href="style.css">
+-</head>
+-<body>
+-  <div class="one">
+-    DIV ONE
+-  </div>
+-  <div class="two">
+-    DIV TWO
+-  </div>
+-  <div class="three">
+-    DIV THREE
+-  </div>
+-</body>
+-</html>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Margin and Padding exercise</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <div class="one">
++    DIV ONE
++  </div>
++  <div class="two">
++    DIV TWO
++  </div>
++  <div class="three">
++    DIV THREE
++  </div>
++</body>
++</html>
+diff --git a/margin-and-padding/margin-and-padding-1/solution/solution.css b/margin-and-padding/margin-and-padding-1/solution/solution.css
+index ca28db0..2ac0b6a 100644
+--- a/margin-and-padding/margin-and-padding-1/solution/solution.css
++++ b/margin-and-padding/margin-and-padding-1/solution/solution.css
+@@ -1,28 +1,28 @@
+-body {
+-  max-width: 600px;
+-  margin: 0 auto;
+-}
+-
+-.one {
+-  background: pink;
+-  border: 3px solid blue;
+-  /* CHANGE ME */
+-  padding: 32px;
+-  margin: 12px;
+-}
+-
+-.two {
+-  background: lightblue;
+-  border: 3px solid purple;
+-  /* CHANGE ME */
+-  margin-bottom: 48px;
+-}
+-
+-.three {
+-  background: peachpuff;
+-  border: 3px solid brown;
+-  width: 200px;
+-  /* CHANGE ME */
+-  padding: 32px;
+-  margin-left: auto;
++body {
++  max-width: 600px;
++  margin: 0 auto;
++}
++
++.one {
++  background: pink;
++  border: 3px solid blue;
++  /* CHANGE ME */
++  padding: 32px;
++  margin: 12px;
++}
++
++.two {
++  background: lightblue;
++  border: 3px solid purple;
++  /* CHANGE ME */
++  margin-bottom: 48px;
++}
++
++.three {
++  background: peachpuff;
++  border: 3px solid brown;
++  width: 200px;
++  /* CHANGE ME */
++  padding: 32px;
++  margin-left: auto;
+ }
+\ No newline at end of file
+diff --git a/margin-and-padding/margin-and-padding-1/solution/solution.html b/margin-and-padding/margin-and-padding-1/solution/solution.html
+index 72dd4f9..aa2a45b 100644
+--- a/margin-and-padding/margin-and-padding-1/solution/solution.html
++++ b/margin-and-padding/margin-and-padding-1/solution/solution.html
+@@ -1,21 +1,21 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Margin and Padding exercise</title>
+-  <link rel="stylesheet" href="solution.css">
+-</head>
+-<body>
+-  <div class="one">
+-    DIV ONE
+-  </div>
+-  <div class="two">
+-    DIV TWO
+-  </div>
+-  <div class="three">
+-    DIV THREE
+-  </div>
+-</body>
+-</html>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Margin and Padding exercise</title>
++  <link rel="stylesheet" href="solution.css">
++</head>
++<body>
++  <div class="one">
++    DIV ONE
++  </div>
++  <div class="two">
++    DIV TWO
++  </div>
++  <div class="three">
++    DIV THREE
++  </div>
++</body>
++</html>
+diff --git a/margin-and-padding/margin-and-padding-1/style.css b/margin-and-padding/margin-and-padding-1/style.css
+index ca28db0..2ac0b6a 100644
+--- a/margin-and-padding/margin-and-padding-1/style.css
++++ b/margin-and-padding/margin-and-padding-1/style.css
+@@ -1,28 +1,28 @@
+-body {
+-  max-width: 600px;
+-  margin: 0 auto;
+-}
+-
+-.one {
+-  background: pink;
+-  border: 3px solid blue;
+-  /* CHANGE ME */
+-  padding: 32px;
+-  margin: 12px;
+-}
+-
+-.two {
+-  background: lightblue;
+-  border: 3px solid purple;
+-  /* CHANGE ME */
+-  margin-bottom: 48px;
+-}
+-
+-.three {
+-  background: peachpuff;
+-  border: 3px solid brown;
+-  width: 200px;
+-  /* CHANGE ME */
+-  padding: 32px;
+-  margin-left: auto;
++body {
++  max-width: 600px;
++  margin: 0 auto;
++}
++
++.one {
++  background: pink;
++  border: 3px solid blue;
++  /* CHANGE ME */
++  padding: 32px;
++  margin: 12px;
++}
++
++.two {
++  background: lightblue;
++  border: 3px solid purple;
++  /* CHANGE ME */
++  margin-bottom: 48px;
++}
++
++.three {
++  background: peachpuff;
++  border: 3px solid brown;
++  width: 200px;
++  /* CHANGE ME */
++  padding: 32px;
++  margin-left: auto;
+ }
+\ No newline at end of file
+diff --git a/margin-and-padding/margin-and-padding-2/README.md b/margin-and-padding/margin-and-padding-2/README.md
+index 34eaaaa..b220496 100644
+--- a/margin-and-padding/margin-and-padding-2/README.md
++++ b/margin-and-padding/margin-and-padding-2/README.md
+@@ -1,18 +1,18 @@
+-# Margin and Padding #2
+-
+-This one is a little nicer looking, and a little closer to something you might see in the real world. You'll need to change a little more than just margin and padding to make it look exactly right.
+-
+-## Desired outcome
+-![desired outcome](./desired-outcome.png)
+-
+-### Self Check
+-Use this section to check your work. On _these_ projects, your goal isn't to attain 100% pixel perfection, but to use the tools you've learned to get relatively close to the desired output.
+-
+-- There is 8px between the edge of the card and its content (the blue sections).
+-- There is an 8px gap between each of the blue sections inside the card.
+-- The title of the card uses a 16px font.
+-- There are 8px between the title text and the edge of the title section.
+-- The content section has 16px space on the top and bottom, and 8px on either side.
+-- Everything inside the `.button` section is centered, and there is 8px padding.
+-- The Big Button is centered on its own line.
++# Margin and Padding #2
++
++This one is a little nicer looking, and a little closer to something you might see in the real world. You'll need to change a little more than just margin and padding to make it look exactly right.
++
++## Desired outcome
++![desired outcome](./desired-outcome.png)
++
++### Self Check
++Use this section to check your work. On _these_ projects, your goal isn't to attain 100% pixel perfection, but to use the tools you've learned to get relatively close to the desired output.
++
++- There is 8px between the edge of the card and its content (the blue sections).
++- There is an 8px gap between each of the blue sections inside the card.
++- The title of the card uses a 16px font.
++- There are 8px between the title text and the edge of the title section.
++- The content section has 16px space on the top and bottom, and 8px on either side.
++- Everything inside the `.button` section is centered, and there is 8px padding.
++- The Big Button is centered on its own line.
+ - The Big Button has 24px space on the sides, and 8px on top and bottom.
+\ No newline at end of file
+diff --git a/margin-and-padding/margin-and-padding-2/index.html b/margin-and-padding/margin-and-padding-2/index.html
+index 366b19d..65d746a 100644
+--- a/margin-and-padding/margin-and-padding-2/index.html
++++ b/margin-and-padding/margin-and-padding-2/index.html
+@@ -1,17 +1,17 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Margin and Padding exercise 2</title>
+-  <link rel="stylesheet" href="style.css">
+-</head>
+-<body>
+-  <div class="card">
+-    <h1 class="title">I'm a card</h1>
+-    <div class="content">I have content inside me..lorem ipsum blah blah blah. Here's some stuff you need to read.</div>
+-    <div class="button-container">and a <button>BIG BUTTON</button></div>
+-  </div>
+-</body>
+-</html>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Margin and Padding exercise 2</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <div class="card">
++    <h1 class="title">I'm a card</h1>
++    <div class="content">I have content inside me..lorem ipsum blah blah blah. Here's some stuff you need to read.</div>
++    <div class="button-container">and a <button>BIG BUTTON</button></div>
++  </div>
++</body>
++</html>
+diff --git a/margin-and-padding/margin-and-padding-2/solution/solution.css b/margin-and-padding/margin-and-padding-2/solution/solution.css
+index f4e3a33..7c5be6b 100644
+--- a/margin-and-padding/margin-and-padding-2/solution/solution.css
++++ b/margin-and-padding/margin-and-padding-2/solution/solution.css
+@@ -1,62 +1,62 @@
+-body {
+-  background: #eee;
+-  font-family: sans-serif;
+-}
+-
+-.card {
+-  width: 400px;
+-  background: #fff;
+-  margin: 16px auto;
+-}
+-
+-.title {
+-  background: #e3f4ff;
+-}
+-
+-.content {
+-  background: #e3f4ff;
+-}
+-
+-.button-container {
+-  background: #e3f4ff;
+-}
+-
+-button {
+-  background: white;
+-  border: 1px solid #eee;
+-}
+-
+-/* SOLUTION */
+-
+-/* disclaimer: duplicating the selectors here isn't best practice.
+-In your solution you probably put it right inside the existing selectors,
+-which _is_ the best practice.
+-
+-We separated it out here to make it extra clear what has changed. */
+-
+-.card {
+-  padding: 8px;
+-}
+-
+-.title {
+-  margin-top: 0;
+-  margin-bottom: 8px;
+-  font-size: 16px;
+-  padding: 8px;
+-}
+-
+-.content {
+-  margin-bottom: 8px;
+-  padding: 16px 8px;
+-}
+-
+-.button-container {
+-  text-align: center;
+-  padding: 8px;
+-}
+-
+-button {
+-  display: block;
+-  margin: 0 auto;
+-  padding: 8px 24px;
++body {
++  background: #eee;
++  font-family: sans-serif;
++}
++
++.card {
++  width: 400px;
++  background: #fff;
++  margin: 16px auto;
++}
++
++.title {
++  background: #e3f4ff;
++}
++
++.content {
++  background: #e3f4ff;
++}
++
++.button-container {
++  background: #e3f4ff;
++}
++
++button {
++  background: white;
++  border: 1px solid #eee;
++}
++
++/* SOLUTION */
++
++/* disclaimer: duplicating the selectors here isn't best practice.
++In your solution you probably put it right inside the existing selectors,
++which _is_ the best practice.
++
++We separated it out here to make it extra clear what has changed. */
++
++.card {
++  padding: 8px;
++}
++
++.title {
++  margin-top: 0;
++  margin-bottom: 8px;
++  font-size: 16px;
++  padding: 8px;
++}
++
++.content {
++  margin-bottom: 8px;
++  padding: 16px 8px;
++}
++
++.button-container {
++  text-align: center;
++  padding: 8px;
++}
++
++button {
++  display: block;
++  margin: 0 auto;
++  padding: 8px 24px;
+ }
+\ No newline at end of file
+diff --git a/margin-and-padding/margin-and-padding-2/solution/solution.html b/margin-and-padding/margin-and-padding-2/solution/solution.html
+index b16b451..33ecbc3 100644
+--- a/margin-and-padding/margin-and-padding-2/solution/solution.html
++++ b/margin-and-padding/margin-and-padding-2/solution/solution.html
+@@ -1,17 +1,17 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Margin and Padding exercise 2</title>
+-  <link rel="stylesheet" href="solution.css">
+-</head>
+-<body>
+-  <div class="card">
+-    <h1 class="title">I'm a card</h1>
+-    <div class="content">I have content inside me..lorem ipsum blah blah blah. Here's some stuff you need to read.</div>
+-    <div class="button-container">and a <button>BIG BUTTON</button></div>
+-  </div>
+-</body>
+-</html>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Margin and Padding exercise 2</title>
++  <link rel="stylesheet" href="solution.css">
++</head>
++<body>
++  <div class="card">
++    <h1 class="title">I'm a card</h1>
++    <div class="content">I have content inside me..lorem ipsum blah blah blah. Here's some stuff you need to read.</div>
++    <div class="button-container">and a <button>BIG BUTTON</button></div>
++  </div>
++</body>
++</html>
+diff --git a/margin-and-padding/margin-and-padding-2/style.css b/margin-and-padding/margin-and-padding-2/style.css
+index a905e22..643170b 100644
+--- a/margin-and-padding/margin-and-padding-2/style.css
++++ b/margin-and-padding/margin-and-padding-2/style.css
+@@ -1,40 +1,40 @@
+-body {
+-  background: #eee;
+-  font-family: sans-serif;
+-}
+-
+-.card {
+-  width: 400px;
+-  background: #fff;
+-  margin: 16px auto;
+-  padding: 8px;
+-}
+-
+-.title {
+-  font-size: 20px;
+-  background: #e3f4ff;
+-  margin-top: 0px;
+-  margin-bottom: 8px;
+-  padding: 8px;
+-}
+-
+-.content {
+-  background: #e3f4ff;
+-  margin-bottom: 8px;
+-  padding: 16px 8px 16px 8px;
+-}
+-
+-.button-container {
+-  text-align: center;
+-  background: #e3f4ff;
+-  padding: 8px;
+-
+-}
+-
+-button {
+-  background: white;
+-  border: 1px solid #eee;
+-  display: block;
+-  margin: 0 auto;
+-  padding: 8px 24px;
++body {
++  background: #eee;
++  font-family: sans-serif;
++}
++
++.card {
++  width: 400px;
++  background: #fff;
++  margin: 16px auto;
++  padding: 8px;
++}
++
++.title {
++  font-size: 20px;
++  background: #e3f4ff;
++  margin-top: 0px;
++  margin-bottom: 8px;
++  padding: 8px;
++}
++
++.content {
++  background: #e3f4ff;
++  margin-bottom: 8px;
++  padding: 16px 8px 16px 8px;
++}
++
++.button-container {
++  text-align: center;
++  background: #e3f4ff;
++  padding: 8px;
++
++}
++
++button {
++  background: white;
++  border: 1px solid #eee;
++  display: block;
++  margin: 0 auto;
++  padding: 8px 24px;
+ }
+\ No newline at end of file
+-- 
+2.33.0
+
